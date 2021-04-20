@@ -1,6 +1,6 @@
-constlocalstModule = (function (){​​​​​​​​
+const localstModule = (function () {​​​​​​​​
  
-constcreate = function(name, data){​​​​​​​​
+const create = function(name, data){​​​​​​​​
  
 if(typeof(data) == "object"){​​​​​​​​
 console.log("Hey, du skriver et object!")
@@ -10,7 +10,7 @@ data = JSON.stringify(data);
 localStorage.setItem(name, data)
     }​​​​​​​​
  
-constread = function(name){​​​​​​​​
+const read = function(name){​​​​​​​​
 letreadValue = localStorage.getItem(name);
  
 if(readValue && readValue.charAt(0) === "{​​​​​​​​" && readValue.endsWith("}​​​​​​​​")){​​​​​​​​
@@ -24,7 +24,7 @@ readValue = Number(readValue)
 returnreadValue;
     }​​​​​​​​
  
-constremove = function(name){​​​​​​​​
+const remove = function(name){​​​​​​​​
 localStorage.removeItem(name);
     }​​​​​​​​
  
